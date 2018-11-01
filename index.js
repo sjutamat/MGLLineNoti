@@ -55,11 +55,11 @@ app.get('/mglLine-api', function (req, res) {
 });
 
 app.post('/mglLine-api', function(req, res) {
-	//log line messages
-	//console.log(req.body);
-    //console.log(req.body.id);
-    //console.log(req.body.system);
-    //console.log(req.body.message);
+	log line messages
+	console.log(req.body);
+    console.log(req.body.id);
+    console.log(req.body.system);
+    console.log(req.body.message);
 
 	
     const respText = { type: 'text', text: req.body.message };
