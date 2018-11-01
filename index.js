@@ -55,7 +55,7 @@ app.get('/mglLine-api', function (req, res) {
 });
 
 app.post('/mglLine-api', function(req, res) {
-	log line messages
+	//log line messages
 	console.log(req.body);
     console.log(req.body.id);
     console.log(req.body.system);
