@@ -9,10 +9,13 @@ var bodyParser = require('body-parser');
 const config = {
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
   channelSecret: process.env.CHANNEL_SECRET,
+	console.log(channelAccessToken);
+	console.log(channelSecret);
 };
 
 // create LINE SDK client
 const client = new line.Client(config);
+console.log(client);
 
 // create Express app
 // about Express itself: https://expressjs.com/
@@ -20,7 +23,7 @@ const app = express();
 //const https = require('https');
 const http = require('http');
 const fs = require('fs');
-
+console.log(app);
 //set ssl 
 //var https_options = {
  //ca: fs.readFileSync("../sslKey/alerts_siampiwat_in_th.ca-bundle"),
