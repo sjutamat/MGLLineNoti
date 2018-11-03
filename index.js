@@ -39,8 +39,6 @@ app.post('/callback', (req, res) => {
 
 app.get('/', function (request, response) {
     response.send('This is SPWG monitoring application.');
-	console.log(request.body.event[0].source);
-	condole.log(request.body.event[0]);
 });
 
 app.get('/spwg-api', function (req, res) {
@@ -75,7 +73,7 @@ function handleEvent(event) {
 }
 
 // listen on port
-const port = process.env.PORT || 443;
+const port = process.env.PORT || 800;
 //app.listen(port, () => {
 //  console.log(`listening on ${port}`);
 //});
