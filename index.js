@@ -41,7 +41,9 @@ app.post('/callback', line.middleware(config), (req, res) => {
     // application specific logging, throwing an error, or other logic here
 	console.log(JSON.stringify(req.headers));
 });
+
 });
+
 app.get('/', function (request, response) {
     response.send('This is MGL Line notification application.');
 });
@@ -54,7 +56,7 @@ app.get('/mglLine-api', function (req, res) {
 
 app.post('/mglLine-api', function(req, res) {
 	//log line messages
-	console.log(req.body);
+	  console.log(req.body);
     console.log(req.body.id);
     console.log(req.body.system);
     console.log(req.body.message);
@@ -78,7 +80,7 @@ function handleEvent(event) {
 }
 
 // listen on port
-const port = process.env.PORT || 443;
+const port = process.env.PORT || 880;
 //app.listen(port, () => {
 //  console.log(`listening on ${port}`);
 //});
