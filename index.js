@@ -39,6 +39,8 @@ app.post('/callback', (req, res) => {
 
 app.get('/', function (request, response) {
     response.send('This is SPWG monitoring application.');
+	console.log(request.body.event[0].source);
+	condole.log(request.body.event[0]);
 });
 
 app.get('/spwg-api', function (req, res) {
