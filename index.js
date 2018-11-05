@@ -43,6 +43,7 @@ app.get('/', function (request, response) {
 
 //Line push notification module
 app.get('/vip-web', function (req, res) {
+	console.log(req.query.respText);
     const respText = { type: 'text', text: req.query.respText };
     client.pushMessage('Cbc6226eb4738d2d488758e2a4bd522da', respText).catch(function(error) {
   console.log(error);
