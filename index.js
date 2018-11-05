@@ -41,13 +41,13 @@ app.get('/', function (request, response) {
     response.send('This is SPWG monitoring application.');
 });
 
-app.get('/spwg-api', function (req, res) {
+app.get('/mgline', function (req, res) {
     const respText = { type: 'text', text: req.query.respText };
     client.pushMessage('C1c764d4eb6a41e516e81dd882ba22ddd', respText);
 	return res.sendStatus(200);
 });
 
-app.post('/spwg-api', function(req, res) {
+app.post('/mgline', function(req, res) {
 	//log line messages
 	//console.log(req.body);
     //console.log(req.body.id);
