@@ -44,14 +44,14 @@ app.get('/', function (request, response) {
 //Line push notification module
 app.get('/vip-web', function (req, res) {
     const respText = { type: 'text', text: req.query.respText };
-    client.pushMessage('Cbc6226eb4738d2d488758e2a4bd522da', respText);
+    client.pushMessage('Cbc6226eb4738d2d488758e2a4bd522da', respText).catch(e){ console.log(e) };
 	return res.sendStatus(200);
 });
 app.post('/vip-web', function(req, res) {
 	//log line messages
 
     const respText = { type: 'text', text: req.body.message };
-    client.pushMessage('Cbc6226eb4738d2d488758e2a4bd522da', respText);
+    client.pushMessage('Cbc6226eb4738d2d488758e2a4bd522da', respText).catch(e){ console.log(e) };
 	return res.sendStatus(200);
 });
 //End of module
@@ -59,14 +59,14 @@ app.post('/vip-web', function(req, res) {
 //Line push notification module
 app.get('/chow-mue', function (req, res) {
     const respText = { type: 'text', text: req.query.respText };
-    client.pushMessage('C95fa972da26371b61cb5e19c8a5b8ec8', respText);
+    client.pushMessage('C95fa972da26371b61cb5e19c8a5b8ec8', respText).catch(e){ console.log(e) };
     return res.sendStatus(200);
 });
 app.post('/chow-mue', function (req, res) {
     //log line messages
 
     const respText = { type: 'text', text: req.body.message };
-    client.pushMessage('C95fa972da26371b61cb5e19c8a5b8ec8', respText);
+    client.pushMessage('C95fa972da26371b61cb5e19c8a5b8ec8', respText).catch(e){ console.log(e) };
     return res.sendStatus(200);
 });
 //End of module
@@ -74,14 +74,14 @@ app.post('/chow-mue', function (req, res) {
 //Line push notification module
 app.get('/free-porpor', function (req, res) {
     const respText = { type: 'text', text: req.query.respText };
-    client.pushMessage('C54f3d73c0f0a62a08f1f1ae6c0b33326', respText);
+    client.pushMessage('C54f3d73c0f0a62a08f1f1ae6c0b33326', respText).catch(e){ console.log(e) };
     return res.sendStatus(200);
 });
 app.post('/free-porpor', function (req, res) {
     //log line messages
 
     const respText = { type: 'text', text: req.body.message };
-    client.pushMessage('C54f3d73c0f0a62a08f1f1ae6c0b33326', respText); 
+    client.pushMessage('C54f3d73c0f0a62a08f1f1ae6c0b33326', respText).catch(e){ console.log(e) }; 
     return res.sendStatus(200);
 });
 //End of module
