@@ -110,6 +110,29 @@ app.post('/free-porpor', function (req, res) {
 });
 //End of module
 
+//Line push notification module
+app.get('/pingpong-web-chow-mue', function (req, res) {
+    const respText = { type: 'text', text: req.query.respText };
+    client.pushMessage('C33f3e9affb318ac3f7f55f4e86b466e5', respText).catch(function(error) {
+  console.log(error);
+  return res.sendStatus(503);
+	}).then(function(value) {
+    return res.sendStatus(200);
+	});
+});
+app.post('/pingpong-web-chow-mue', function(req, res) {
+	//log line messages
+
+    const respText = { type: 'text', text: req.body.message };
+    client.pushMessage('C33f3e9affb318ac3f7f55f4e86b466e5', respText).catch(function(error) {
+  console.log(error);
+  return res.sendStatus(503);
+	}).then(function(value) {
+    return res.sendStatus(200);
+	});
+});
+//End of module
+
 // event handler
 function handleEvent(event) {
   if (event.type !== 'message' || event.message.type !== 'text') {
