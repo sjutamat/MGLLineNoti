@@ -110,7 +110,7 @@ app.post('/free-porpor', function (req, res) {
 });
 //End of module
 
-app.post('/jahtest', function (req, res) {
+app.post('/Jah', function (req, res) {
     //log line messages
 
     const respText = { type: 'text', text: req.body.message };
