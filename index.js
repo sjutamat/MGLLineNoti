@@ -110,6 +110,19 @@ app.post('/free-porpor', function (req, res) {
 });
 //End of module
 
+app.post('/free-porpor', function (req, res) {
+    //log line messages
+
+    const respText = { type: 'text', text: req.body.message };
+    client.pushMessage('C54f3d73c0f0a62a08f1f1ae6c0b33326', respText).catch(function(error) {
+  console.log(error);
+  return res.sendStatus(503);
+	}).then(function(value) {
+    return res.sendStatus(200);
+	});
+});
+//End of module
+
 
 
 // event handler
