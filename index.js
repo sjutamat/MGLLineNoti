@@ -109,17 +109,7 @@ app.post('/free-porpor', function (req, res) {
 	});
 });
 //End of module
-app.post('/test-to-jah', function(req, res) {
-	//log line messages
 
-    const respText = { type: 'text', text: req.body.message };
-    client.pushMessage('U83ce4aa7c6ea4644d3b6ee7a892018af', respText).catch(function(error) {
-  console.log(error);
-  return res.sendStatus(503);
-	}).then(function(value) {
-    return res.sendStatus(200);
-	});
-});
 
 
 // event handler
